@@ -32,7 +32,6 @@ body {
 
 .contendo {
     display: flex;
-    align-items: flex-start;
     
 }
 .container {

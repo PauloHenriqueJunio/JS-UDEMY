@@ -19,6 +19,22 @@ body {
     line-height: 1.5em;
 }
 
+.resultado {
+    display: inline;
+    font-size: 20px;
+    padding-left: 150px;
+}
+
+.tabela {
+    font-size: 20px;
+    
+}
+
+.contendo {
+    display: flex;
+    align-items: flex-start;
+    
+}
 .container {
     max-width: 640px;
     margin: 0 auto;

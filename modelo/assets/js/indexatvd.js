@@ -1,13 +1,15 @@
 function escopo() {
     const form = document.querySelector(`.form`)
-    form.addEventListener('submit', principal)
-    function principal (evento) {
-        evento.preventDefault()
+    form.addEventListener('submit', function (e) {
+        e.preventDefault()
+        principal()
+    })
+
+    function principal () {
         const peso = form.querySelector(`.peso`)
         const altura = form.querySelector(`.altura`)
         const resultadoPeso = peso.value
         const resultadoAltura = altura.value
-            
             
             let resultadoFinal = null
                 if (resultadoPeso == "" || resultadoAltura == "") {
@@ -32,9 +34,11 @@ function escopo() {
                 const msgSucesso = `Voce tem ${peso.value}kg, tem ${altura.value} de altura e tem ${IMC.toFixed(2)} de IMC ou seja voce eh considerado: ${resultadoFinal}.`;
                 resultado(msgSucesso)
     };
-        function resultado(mensagem) {
+        function resultado(mensagem, validar) {
             const divResultado = document.querySelector('.resultado2');
             divResultado.innerHTML = mensagem;
         }
 };
 escopo()
+
+// criar a mudanca de cor no fundo quando acontece algum erro para vermelho e criar a de cor verde quando for retornado true, fazer isso adicionando uma nova class no paragrafo usndo createElement('p') e appendChilh()!!! /// usar o if(!var) para fazer os erros // tambem adicionar as palavras numa lista e ir selecionando elas de acordo com o que for digitado

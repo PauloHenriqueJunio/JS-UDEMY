@@ -1,16 +1,21 @@
-function escopo(){
+function escopo() {
     const form = document.querySelector(`.form`)
-
+    form.addEventListener('submit', principal)
     function principal (evento) {
         evento.preventDefault()
         const peso = form.querySelector(`.peso`)
         const altura = form.querySelector(`.altura`)
-
-        function calculo () {
-            const resultadoPeso = peso.value
-            const resultadoAltura = altura.value
-            const IMC = resultadoPeso / (resultadoAltura * resultadoAltura)
+        const resultadoPeso = peso.value
+        const resultadoAltura = altura.value
+            
+            
             let resultadoFinal = null
+                if (resultadoPeso == "" || resultadoAltura == "") {
+                    const msgErro = `Favor coloque uma altura e peso validos.`
+                    resultado(msgErro)
+                    return
+                }
+                const IMC = resultadoPeso / (resultadoAltura * resultadoAltura)
                 if(IMC < 18.5) {
                 resultadoFinal = 'Abaixo do peso'
                 } else if (IMC >= 18.5 && IMC <= 24.9) {
@@ -24,15 +29,12 @@ function escopo(){
                 } else {
                 resultadoFinal = `Obesidade grau 3`
                 }
-
-                    function resultado () {
-                    const resultado = document.querySelector(`.resultado2`)
-                    resultado.innerHTML = (`Voce tem ${peso.value}kg, tem ${altura.value} de altura e tem ${IMC.toFixed(2)} de IMC ou seja voce eh considerado: ${resultadoFinal}.`)
-                    }
-            resultado()
-        }
-        calculo()
+                const msgSucesso = `Voce tem ${peso.value}kg, tem ${altura.value} de altura e tem ${IMC.toFixed(2)} de IMC ou seja voce eh considerado: ${resultadoFinal}.`;
+                resultado(msgSucesso)
     };
-form.addEventListener('submit', principal)
+        function resultado(mensagem) {
+            const divResultado = document.querySelector('.resultado2');
+            divResultado.innerHTML = mensagem;
+        }
 };
 escopo()

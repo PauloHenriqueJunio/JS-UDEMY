@@ -1,4 +1,4 @@
-const data = new Date('2025-08-22 17:41:32.500');
+/* const data = new Date('2025-08-22 17:41:32.500');
 console.log(`Dia`, data.getDate());
 console.log(`Mes`, data.getMonth() + 1); // Mes em javascript sempre comeca com indice 0
 console.log(`Ano`, data.getFullYear());
@@ -7,7 +7,26 @@ console.log(`Minutos`, data.getMinutes());
 console.log(`Segundos`, data.getSeconds());
 console.log(`ms`, data.getMilliseconds());
 console.log(`Dia da semana`, data.getDay()); // 0 - Domingo, 6 - Sabado
-
 console.log(data.toString());
 
 // console.log(Date.now()) // isso daqui vai dar exatamente a data de hoje desde o marco zero (1 de 1970)
+
+*/
+
+function zeroAEsq (num) {
+    return (num >= 10) ? num : `0${num}`
+}
+function pegarData (date) {
+const dia = zeroAEsq(data.getDate());
+const mes = zeroAEsq(data.getMonth() + 1);
+const ano = zeroAEsq(data.getFullYear());
+const hora = zeroAEsq(data.getHours());
+const min = zeroAEsq(data.getMinutes());
+const seg = zeroAEsq(data.getSeconds());
+
+return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}.`
+}
+
+const data = new Date();
+const dataBrasil = pegarData(data);
+console.log(dataBrasil);

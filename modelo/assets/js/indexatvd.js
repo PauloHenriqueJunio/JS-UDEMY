@@ -9,7 +9,7 @@ function escopo() {
         const altura = form.querySelector(`.altura`)
         const resultadoPeso = Number(peso.value)
         const resultadoAltura = Number(altura.value)
-        const IMCR = calculoIMC(resultadoPeso, resultadoAltura)
+        const IMCR = calculoIMC()
         const nivelIMC = nivel_imc(IMCR);
         const mensagem = `Seu IMC eh ${IMCR} (${nivelIMC}).`
 
@@ -22,7 +22,7 @@ function escopo() {
             resultado(`Altura invalida!`, false)
             return;
             }
-        function calculoIMC(resultadoPeso, resultadoAltura ) {
+        function calculoIMC() {
             const IMC = resultadoPeso / resultadoAltura ** 2;
             return IMC.toFixed(2);
         };

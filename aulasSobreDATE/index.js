@@ -16,7 +16,7 @@ console.log(data.toString());
 function zeroAEsq (num) {
     return (num >= 10) ? num : `0${num}`
 }
-function pegarData (date) {
+function pegarData () {
 const dia = zeroAEsq(data.getDate());
 const mes = zeroAEsq(data.getMonth() + 1);
 const ano = zeroAEsq(data.getFullYear());

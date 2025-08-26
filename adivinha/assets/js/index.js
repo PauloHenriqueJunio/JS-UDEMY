@@ -1,4 +1,4 @@
-const numSecreto = Math.floor(Math.random() * 10);
+const numSecreto = Math.floor(Math.random() * 1000);
 const botao = document.querySelector(`.checar`)
 const dicas = document.querySelector(`.dicas`);
 console.log(numSecreto)

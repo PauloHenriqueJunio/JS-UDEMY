@@ -15,15 +15,15 @@ function verificarPalpite () {
     if (palpite > numSecreto) {
         dicas.classList.add(`maior`)
         dicas.classList.remove(`menor`, `correto`)
-        dicas.innerHTML = `Seu palpite foi maior`;
+        dicas.innerHTML = `Seu palpite foi maior`.toUpperCase();
     } else if (palpite < numSecreto) {
         dicas.classList.add(`menor`)
         dicas.classList.remove(`maior`, `correto`)
-        dicas.innerHTML = `Seu palpite foi menor`;
+        dicas.innerHTML = `Seu palpite foi menor`.toUpperCase();
     } else if (palpite === numSecreto) {
         dicas.classList.add(`correto`)
         dicas.classList.remove(`maior`, `menor`)
-        dicas.innerHTML = `ACERTOU!`;
+        dicas.innerHTML = `ACERTOU!`.toUpperCase();
     };
 
 

@@ -66,12 +66,24 @@ form button:active {
 
 .maior {
     background-color: blue;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
 }
 
 .menor {
     background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
 }
 
 .correto {
     background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
 }

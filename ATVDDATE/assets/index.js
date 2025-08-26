@@ -9,80 +9,87 @@ function escopo() {
         const diaSemana = data.getDay();
         const mes = data.getMonth() + 1;
         const ano = data.getFullYear();
-        const hora = data.getHours();
-        const min = data.getMinutes();
-        const sec = data.getSeconds();
+        const hora = zeroAEsq(data.getHours());
+        const min = zeroAEsq(data.getMinutes());
+        const sec = zeroAEsq(data.getSeconds());
+        const pegarMes = getMesTexto(mes);
+        const pegarDia = pegarDiaTexto(diaSemana)
 
+    function pegarDiaTexto() {
         let diaSemanal = Number(diaSemana);
-
         switch (diaSemana) {
          case 0:
              diaSemanal = `Domingo`;
-             break;
+             return diaSemanal;
          case 1:
              diaSemanal = `Segunda-feira`;
-             break;
+             return diaSemanal;
          case 2:
             diaSemanal = `Terca`;
-             break;
+             return diaSemanal;
          case 3:
              diaSemanal = `Quarta`;
-             break;
+             return diaSemanal;
          case 4:
              diaSemanal = `Quinta`;
-             break;
+             return diaSemanal;
          case 5:
              diaSemanal = `Sexta`;
-             break;
+             return diaSemanal;
          case 6:
              diaSemanal = `Sabado`;
-             break;
+             return diaSemanal;
          default:
              diaSemanal = `Nada`
     }
-        let mesCase;
+    return diaSemanal;
+}
+    function getMesTexto() {
+    let mesCase;
     switch (mes) {
          case 1:
              mesCase = `Janeiro`;
-             break;
+             return mesCase;
          case 2:
             mesCase = `Fevereiro`;
-             break;
+             return mesCase;
          case 3:
              mesCase = `Março`;
-             break;
+             return mesCase;
          case 4:
              mesCase = `Abril`;
-             break;
+             return mesCase;
          case 5:
              mesCase = `Maio`;
-             break;
+             return mesCase;
          case 6:
              mesCase = `Junho`;
-             break;
+             return mesCase;
          case 7:
              mesCase = `Julho`;
-             break;
+             return mesCase;
          case 8:
              mesCase = `Agosto`;
-             break;
+             return mesCase;
          case 9:
              mesCase = `Setembro`;
-             break;
+             return mesCase;
          case 10:
              mesCase = `Novembro`;
-             break;
+             return mesCase;
          case 11:
              mesCase = `Outubro`;
-             break;
+             return mesCase;
          case 12:
              mesCase = `Dezembro`;
-             break;
+             return mesCase;
          default:
              mesCase = `Natal`
-
+    
     }
-    return `${diaSemanal}, ${dia} de ${mesCase} de ${ano} ás ${hora}:${min}:${sec}`;
+    return mesCase;
+}
+    return `${pegarDia}, ${dia} de ${pegarMes} de ${ano} ás ${hora}:${min}:${sec}`;
 }
 
     function criarP () {

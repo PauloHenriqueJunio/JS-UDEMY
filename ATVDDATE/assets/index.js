@@ -10,6 +10,7 @@ function escopo() {
         const mes = data.getMonth() + 1;
         const ano = zeroAEsq(data.getFullYear());
         const hora = zeroAEsq(data.getHours());
+        const min = zeroAEsq(data.getMinutes());
         const sec = zeroAEsq(data.getSeconds());
 
         let diaSemanal = Number(diaSemana);
@@ -81,7 +82,7 @@ function escopo() {
              mesCase = `Natal`
 
     }
-    return `${diaSemanal}, ${dia} de ${mesCase} de ${ano}  ${hora}:${sec}`;
+    return `${diaSemanal}, ${dia} de ${mesCase} de ${ano} ás ${hora}:${min}:${sec}`;
 }
 
     function criarP () {

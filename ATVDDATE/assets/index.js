@@ -8,10 +8,10 @@ function escopo() {
         const dia = zeroAEsq(data.getDate());
         const diaSemana = data.getDay();
         const mes = data.getMonth() + 1;
-        const ano = zeroAEsq(data.getFullYear());
-        const hora = zeroAEsq(data.getHours());
-        const min = zeroAEsq(data.getMinutes());
-        const sec = zeroAEsq(data.getSeconds());
+        const ano = data.getFullYear();
+        const hora = data.getHours();
+        const min = data.getMinutes();
+        const sec = data.getSeconds();
 
         let diaSemanal = Number(diaSemana);
 

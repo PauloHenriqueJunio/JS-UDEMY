@@ -59,5 +59,3 @@ function escopo() {
 }
 };
 escopo()
-
-// criar a mudanca de cor no fundo quando acontece algum erro para vermelho e criar a de cor verde quando for retornado true, fazer isso adicionando uma nova class no paragrafo usndo createElement('p') e appendChilh()!!! /// usar o if(!var) para fazer os erros // tambem adicionar as palavras numa lista e ir selecionando elas de acordo com o que for digitado

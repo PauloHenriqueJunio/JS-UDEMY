@@ -9,7 +9,7 @@ const container = document.querySelector(`.container`);
 const div = document.createElement(`p`);
 
 for (let i = 0; i < elementos.length; i++) {
-    let {tag, texto} = elementos[1];
+    let {tag, texto} = elementos[i];
     const tagCriada = document.createElement(tag)
     tagCriada.innerHTML = texto;
     div.appendChild(tagCriada)

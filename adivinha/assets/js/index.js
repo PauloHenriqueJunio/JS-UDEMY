@@ -25,6 +25,4 @@ function verificarPalpite () {
         dicas.classList.remove(`maior`, `menor`)
         dicas.innerHTML = `ACERTOU!`.toUpperCase();
     };
-
-
 }

@@ -1,8 +1,8 @@
 const elementos =[ 
     {tag: `p`, texto: `Aqui esta um frase qualquer`},
-    {tag: `div`, texto: `Frase 1`},
-    {tag: `p`, texto: `Frase 2`},
-    {tag: `footer`, texto: `Frase 3`}
+    {tag: `h3`, texto: `Frase com h3`},
+    {tag: `h2`, texto: `Frase com h2`},
+    {tag: `h1`, texto: `Frase com h1`}
 ]
 
 const container = document.querySelector(`.container`);

@@ -21,16 +21,13 @@ function isNumber () {
 }
 
 function fizz () {
-    if (numero % 3 === 0) {
+    if (numero % 3 === 0)
         console.log(`${numero} é divisivel por 3!`)
-    }   else {console.log("Não é divisivel por 3!")}
-    
 }
 
 function buzz () {
-    if (numero % 5 === 0) {
+    if (numero % 5 === 0)
         console.log(`${numero} é divisivel por 5!`)
-    }   else {console.log(`${numero} não é divisivel por 5!`)}
 }
 
 function FizzBuzz () {
@@ -40,6 +37,7 @@ function FizzBuzz () {
         console.log(`${numero} nao foi divisivel por 3 e 5 ao mesmo tempo`)
     }
 }
+
 
 isNumber(),
 fizz(),
